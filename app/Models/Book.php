@@ -14,10 +14,18 @@ class Book extends Model
         'author',
         'description',
         'published_at',
+        'available'
     ];
-
+//defining the relation between borrowing table and books
     public function borrowingRecords()
     {
         return $this->hasMany(BorrowRecord::class);
+    }
+    public function category()
+{
+    return $this->belongsTo(Category::class);
+}
+    public function Users(){
+        return $this->hasMany(User::class);
     }
 }

@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -17,7 +16,7 @@ class BorrowRecord extends Model
         'returned_at',
     ];
 
-    // Relationships
+    // Relationships between books and users tables 
     public function book()
     {
         return $this->belongsTo(Book::class);
